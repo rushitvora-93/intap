@@ -1,0 +1,66 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #000000;
+}
+body.mat-typography {
+  background-color: #000000;
+}
+.spinner1 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 50px !important;
+    height: 50px !important;
+}
+.top-headear a:hover {
+  color: #fff !important;
+}
+a:hover{text-decoration: none;}
+
+.popover {
+  width: 500px !important;
+}
+
+.spinner-wrapper{
+    opacity: 0.5;
+    height: 100%;
+    width: 100%;
+    top:0;
+    z-index: 999;
+    background-color: black;
+    position: fixed;
+}
+.top-headear{
+  width: 33.33%;
+}
+.main-section {
+  width: 100%;
+  float: left;
+}
+.rippllogo{
+  height: 80px;
+  padding: 1px;     
+  border: 2px solid #fff;
+  border-radius: 50px;
+}
+.headerPanel{
+  width: 100%;
+  float: left;
+  padding: 10px 0;
+  /* border-bottom: 1px solid #DADADA; */
+}
+.tapin-header{width: 100%;
+  background-color: #3BD950;
+  color: white;
+  font-weight: 550;
+  text-align: center;
+  border: none;}
+ 

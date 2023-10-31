@@ -1,0 +1,27 @@
+<div class="header">
+    <img class="logo my-3" src="assets/logo/Attachment_1588757267.png" />
+    <!-- <a [routerLink]="['/sign-up']" class="join-link"><b>Join</b></a> -->
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3 m-t-80">
+        <h2 class="title text-center">Submit 6 digit code</h2>
+        <div class="card">
+            <p class="card-title text-center">Your reset password email has been sent! If you don't see it in your inbox, it might be in your spam.</p>
+            <form name="otpForm" [formGroup]="otpForm"  novalidate>
+              <div class="form-group">
+                <input type="text" formControlName="otp" class="form-control email" placeholder="xxxxxx">
+                <small class="text-danger" *ngIf="otpFormErrors.otp.required">
+                  Otp is required
+                </small>
+              </div>
+             
+              <button type="submit" class="btn btn-primary login" (click)="onSubmit(otpForm.value)" [disabled]="otpForm.invalid">Reset Password</button>
+              <a class="text-center text-primary forgot" routerLink = "/login">Back to Login </a>
+             
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+ 

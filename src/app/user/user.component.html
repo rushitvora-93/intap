@@ -1,0 +1,71 @@
+<ng-container *ngIf = "show">
+<!-- <div class="top">
+    <button class="tapin-header btn">Tap here to download to new Tap In App</button>
+  </div> -->
+  <div class="headerPanel mb-3">
+    <div class="container">
+      <div class="row"> 
+        <div class="col-md-6 offset-md-3">
+          <ul class="nav">
+            <li class="top-headear text-left align-self-center" routerLink = "/login"><a class="taxt-black btn"><b>Login</b></a></li>
+            <li class="top-headear text-center align-self-center">
+              <a><img alt="Tap In logo" class="rippllogo" src="assets/logo/Attachment_1588757267.png"></a>
+            </li>
+            <li class="top-headear text-right align-self-center" routerLink = "/sign-up"><a class="taxt-black btn"><b>Join</b></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <div class="profileSection">
+          <div class="profileImage">
+            <i class="fa fa-user-circle-o" *ngIf = "!profileImage"></i>
+            <img *ngIf = "profileImage" src="{{profileImage}}" />
+            <span class="bio"><b>Taps: {{ tapinCount }}</b></span>
+          </div>
+          <div class="prfileContant">
+            <h3 class="text-center">{{fullName}}</h3>
+            <p class="text-center">{{bio}}</p>
+          </div>
+        </div>
+        <div class="d-flex flex-row bd-highlight justify-content-center buttonSection mt-3">
+          <button class="btn btn-primary" *ngIf = "profile == '1'" id="downloadButton" [vcdDownloadVCard]="vCard" [encoding]="vCardEncoding.utf8"><b>Add to Contacts </b><i class="fa fa-download"></i></button>
+          <button class="btn btn-primary" style="opacity: 0.1;" *ngIf = "profile == '0' || profile == 0"><b>Add to Contacts </b><i class="fa fa-download"></i></button>
+        </div>
+  
+        <div class="row mt-3 text-center" *ngIf = "profile == '1'">
+            <div class="col-6 mt-3 column" *ngFor="let img of dataSource; let i = index">
+              <a href="{{img.SocialLink}}"  target="_blank">
+                <img class="whtsapp" *ngIf = "img.title != 'safari'" src="{{img.imageLink}}">
+                <img *ngIf = "img.title == 'safari'" style="width: 103%;" src="{{img.imageLink}}">
+              <div class="desc">{{img.title}}</div></a>
+            </div>
+           
+        </div>
+        <div class="row mt-3 text-center" *ngIf = "profile == '0' || profile == 0">
+          <div class="col-12 mt-3 column text-center profileEnable">
+            <i class="fa fa-lock"></i>
+          </div>
+          <div class="col-12 mt-3 column">
+            <p>Meet {{ username }} in person to see their TapIn profile</p>
+          </div>
+        </div> 
+  
+        <div class="footerMain">
+          <div class="PoweredSection">
+            <!-- <strong>
+              <a class="PoweredBy">Patent Pending <i class="fa fa-check-circle"></i><br></a>
+            </strong>
+            <a href="#"><hr class="hr"><strong>TapIn</strong></a> -->
+            <!-- <a href="#" class="logoText"><strong>TapIn</strong></a>
+            <a href="#" class="PoweredBy helpSection">Help Center</a> -->
+          </div>
+   
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>

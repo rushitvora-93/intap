@@ -1,0 +1,212 @@
+<!-- <div class="top" [ngClass]="{'setOpt' : pop}">
+    <button class="btn btn-top">Tap here to download to new Tap In App</button>
+  </div> -->
+  <div class="headerPanel mb-3" [ngClass]="{'removeBorder' : pop}">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 offset-md-3 optClass">
+          <ul class="nav">
+            <li class="top-headear text-left align-self-center" [ngClass]="{'setOpt' : pop}"><a class="EditProfile" (click)="editProfile()">
+                <i class="fa fa-sliders"></i>
+              </a>
+            </li>
+            <li class="top-headear text-center align-self-center" [ngClass]="{'logoResize' : pop}">
+              <a><img alt="Popl logo" class="rippllogo" src="assets/logo/Attachment_1588757267.png"></a>
+            </li>
+            <li class="top-headear text-right align-self-center" [ngClass]="{'setOpt' : pop}" (click)="qrCodeEnable()">
+              <img src="assets/social/qrcode.png" height="30px" width="30px">
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container" [ngClass]="{'setOpt' : pop}">
+    <div class="row text-center">
+      <div class="col-md-6 offset-md-3">
+        <div class="profileSection">
+          <div class="profileImage">
+            <i class="fa fa-user-circle-o"></i>
+            <span class="bio"><b>Taps: {{countTapin}}</b></span>
+          </div>
+          <div class="prfileContant">
+            <h3>{{fullName}}</h3>
+            <p>{{desc}}</p>
+          </div>
+        </div>
+        <div class="d-flex flex-row bd-highlight justify-content-center buttonSection mt-3">
+          <button class="btn directButton" [disabled]='isDisabled'
+           [ngClass]="{'green' : seen, 'red': !seen}" (click)="directoff()"><b>{{caption}}</b></button>
+          <button class="btn directButton" (click)="editLinks()"
+            [ngClass]="{'green' : toggle, 'red': !toggle}"><b>{{name}}</b></button>
+        </div>
+  
+        <div class="row mt-3" *ngIf="notDraggable">
+         <ng-container *ngIf = "caption == 'Direct On'">
+          <div class="col-6 mt-3 column" *ngFor="let data of dataSource; let i =index;">
+            <a href="{{ data.SocialLink }}" *ngIf = "i == 0"  target="_blank"><img class="whtsapp" src="{{data.imageLink}}">
+            <div class="desc" *ngIf = "i == 0" >{{data.title}}</div></a>
+            <a *ngIf = "i > 0" class="setOpacity"  target="_blank">
+              <img class="whtsapp" *ngIf = "data.title == 'safari'" src="{{data.imageLink}}">
+              <img *ngIf = "data.title == 'safari'" style="width: 103%;" src="{{data.imageLink}}">
+              <div class="desc" class="setOpacity" *ngIf = "i > 0" >{{data.title}}</div></a>
+          </div>
+          <div class="col-6 mt-3 column setOpacity">
+            <img class="whtsapp" style="border: none;" src="/assets/social/plus.png">
+            <div class="desc">Add Link</div>
+          </div>
+        </ng-container>
+        <ng-container *ngIf = "caption == 'Direct Off'">
+          <div class="col-6 mt-3 column" *ngFor="let data of dataSource">
+            <a href="{{ data.SocialLink }}"  target="_blank">
+              <img class="whtsapp" *ngIf = "data.title != 'safari'" src="{{data.imageLink}}">
+              <img *ngIf = "data.title == 'safari'" style="width: 103%;" src="{{data.imageLink}}">
+            <div class="desc">{{data.title}}</div></a>
+          </div>
+          <div class="col-6 mt-3 column" (click)="addnewLink()">
+            <img class="whtsapp" style="border: none;" src="/assets/social/plus.png">
+            <div class="desc">Add Link</div>
+          </div>
+        </ng-container>
+        </div>
+  
+  
+        <div cdkDropList (cdkDropListDropped)="drop($event)" *ngIf="Draggable">
+          <div class="row mt-3">
+            <div class="col-6 mt-3 column" *ngFor="let img of dataSource; let i = index">
+              <span class="close" (click)="delete(img.id)"><i class="fa fa-times-circle"></i></span>
+              <a href="{{img.SocialLink}}"  target="_blank">
+                <img class="whtsapp" *ngIf = "img.title != 'safari'" cdkDrag src="{{img.imageLink}}">
+                <img *ngIf = "img.title == 'safari'" style="width: 103%;" src="{{img.imageLink}}">
+              <div class="desc">{{img.title}}</div></a>
+            </div>
+            <div class="col-6 mt-3 column" (click)="addnewLink()">
+             <img class="whtsapp" cdkDrag style="border: none;" src="/assets/social/plus.png">
+              <div class="desc">Add Link</div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- <div class="footerMain"> -->
+          <!-- <div class="PoweredSection"> -->
+             <!-- <strong>
+            <a class="PoweredBy">Patent Pending <i class="fa fa-check-circle"></i><br></a>
+          </strong> 
+         <a class="colorLink"><hr class="hr"><strong>TapIn</strong></a> -->
+          <!-- <a class="colorLink"><strong>TapIn</strong></a>
+          <a class="PoweredBy helpSection">Help Center</a> -->
+          <!-- </div> -->
+  
+        <!-- </div> -->
+      </div>
+    </div>
+  </div>
+  
+  <!-- QR code Section popup Start -->
+  <div class="qrgenerateSection" *ngIf="qrCode">
+    <a class="closeqr" (click)="closeLinkQr()">
+      <i class="fa fa-times-circle"></i>
+    </a>
+    <div class="container">
+      <div class="qr-content text-center">
+        <a  href="javascript:void(0)" class="btn btn-primary addWalletbtn"><b>Add to wallet </b>
+          <i class="fa fa-download"></i>
+        </a>
+        <p class="scan-taxt">Scan this code with any camera to share your Tap In profile</p>
+            <img alt="qrimage" src="https://api.qrserver.com/v1/create-qr-code/?size=110x110&color=00aced&data=https://poplme.com/?link=https%3A%2F%2Fpoplme%2Eco%2Fshani/q">
+        <p class="scan-taxt">If you have the 
+        <iframe style="display:none;" name="hiddenIframe" id="hiddenIframe"></iframe>
+          
+          <a><b>Tap In app</b></a>, {{ userName }} will be added to your People Page!
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- QR code Section popup End -->
+  
+  <div *ngIf="show" class="bottom text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <div class="d-flex flex-row bd-highlight justify-content-center buttonSection pt-4 ng-star-inserted">
+            <button class="btn directButton green" (click)="addLink()">Add Link</button>
+            <button class="btn directButton red" (click)="saveSocialSequence()">Save</button>
+          </div>
+          <div class="bottom-text text-secondary pt-2">Drag and drop links to reorder</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="Links pt-5" *ngIf="appear">
+    <span (click)="closeLink()" class="closeButton"><i class="fa fa-times-circle"></i></span>
+    <div class="text-center link-text text-secondary">Choose a Social Link To add :</div>
+  
+    <div class="container">
+      <div class="row mt-5">
+        <div class="col-3 text-center mt-3 " *ngFor="let extra of allLinks">
+          <ng-container *ngIf = "extra.disableLink === false">
+            <div class="setOpacity">
+              <button class="links-button"><img  [ngClass]="{'opacity' : change }" class="extra-img" src="{{extra.imageLink}}" /></button>
+              <div class="caption">{{extra.title}}</div>
+            </div>
+          </ng-container>
+          <ng-container *ngIf = "extra.disableLink == true">
+            <button class="links-button" (click)="popUp(extra.title)"><img  [ngClass]="{'opacity' : change }" class="extra-img" src="{{extra.imageLink}}" /></button>
+            <div class="caption">{{extra.title}}</div>
+          </ng-container>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="last add-social" *ngIf="pop">
+    <span (click)="closeLinkUsername()" class="close-button"><img src = "assets/social/close_popup.png" /></span>
+      <div class="row text-center inner-rowss">
+        <div class="col-md-12">
+          <div>
+            <img src="{{sourceLink}}" class="rounded-circle inner-image"/>
+          </div>
+          <div class="text-secondary user-title" style="text-align: left; margin-left: 10px;">Name</div>
+          <div class="input-group">
+           <input class="link-input form-control form-control-new mb-3 lb-none" #searchInput value="{{ fullName }}" readonly type="text"/>
+          </div>
+          <div class="text-secondary user-title my-3" style="text-align: left; margin-left: 10px;">Enter Your {{placeholder}}</div>
+          <div class="input-group">
+            <!-- <div class="input-group-addon-new" *ngIf="simple">
+              <img class="inner-img" src="{{sourceLink}}" />
+            </div> -->
+            <!-- <input *ngIf="mobileView" class="link-input form-control form-control-new mb-3 lb-none" #searchInput [(ngModel)] = 'addUsername' type="text" placeholder="{{placeholder}}" /><i class="fa fa-times-circle closeBtn" (click)="clear()"></i> -->
+            <input class="link-input form-control form-control-new mb-3 lb-none" #searchInput [(ngModel)] = 'addUsername' type="text" placeholder="{{placeholder}}" /><i class="fa fa-times-circle closeBtn" (click)="clear()"></i>
+          </div>
+          <div class="link-caption">
+            {{linkDescription}}
+          </div>
+          <button class="btn btn-success last-btn" (click)="added(sourceLink,title)"><i class="fa fa-check"></i></button>
+        </div>
+      </div>
+  </div>
+  
+  
+  <!-- <div class="last add-social" *ngIf="pop">
+    <div class="container">
+      <span (click)="closeLinkUsername()" class="close-button"><i class="fa fa-times-circle"></i></span>
+      <div class="row text-center">
+        <div class="col-md-6 offset-md-3">
+          <div class="text-center text-secondary user-title my-3">Enter Your {{placeholder}}</div>
+          <div class="input-group">
+            <div class="input-group-addon-new">
+              <img class="inner-img" src="{{sourceLink}}" />
+            </div>
+            <input class="link-input form-control form-control-new mb-3 lb-none" #searchInput [(ngModel)] = 'addUsername' type="text" placeholder="{{placeholder}}" /><i class="fa fa-times-circle closeBtn" (click)="clear()"></i>
+          </div>
+          <div class="link-caption">
+            {{linkDescription}}
+          </div>
+          <button class="btn btn-success last-btn" (click)="added(sourceLink,title)"><i class="fa fa-check"></i></button>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  

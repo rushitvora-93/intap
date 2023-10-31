@@ -1,0 +1,155 @@
+.card-row {
+  justify-content: center;
+  align-items: center;
+}
+
+.join-link {
+  color: #fff !important;
+  margin-left: 80px;
+  font-weight: 350px;
+}
+
+.logo {
+  height: 100px;
+  width: 100px;
+}
+
+.header {
+  text-align: center;
+  width: 100%;
+  border-bottom: 1px solid #DADADA;
+}
+
+.card-col {
+  position: absolute;
+  top: 159px;
+}
+
+.card {
+  /* background-color: #F3F3F3;
+    border:none !important; */
+  background: black;
+  color: white;
+  /* border: 2px solid white; */
+  padding: 10px;
+}
+
+.title {
+  /* font-weight: bold; */
+  font-size: 34px;
+  color: #fff;
+}
+
+.card-title {
+  font-size: 20px;
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: lighter;
+}
+
+.email {
+  width: 92% !important;
+  margin-left: 22px;
+  background-color: #fff;
+  border-radius: 12px;
+}
+
+.popl {
+  width: 100%;
+  background-color: #3BD950;
+  color: white;
+  font-weight: 550;
+  text-align: center;
+  border: none;
+}
+
+.password {
+  width: 92% !important;
+  margin-left: 22px;
+  background-color: #fff;
+  border-radius: 12px;
+}
+
+.login {
+  margin-left: 22px;
+  width: 92%;
+  font-weight: 500;
+  margin-bottom: 10px;
+  background: rgb(0,148,244);
+  color: white;
+  border: 1px solid rgb(0,148,244);
+  border-radius: 8px;
+  /* box-shadow: 0 0 0 0.2rem black !important; */
+}
+
+button:disabled {
+  cursor: not-allowed;
+  pointer-events: all !important;
+}
+
+
+.register-text {
+  margin-top: 15px;
+  margin-bottom: 35px;
+}
+
+.login:active:focus {
+  background: black;
+  color: white;
+  border: 1px solid white;
+  box-shadow: 0 0 0 0.2rem black !important;
+}
+
+.join {
+  width: 100%;
+  margin-bottom: 10px;
+  background: rgb(26, 188, 8);
+  color: white;
+  border: 1px solid rgb(26, 188, 8);
+}
+
+.sign-up{
+  font-weight: 600;
+  border-bottom: 1px solid white;
+}
+
+.join:active:focus {
+  background: black;
+  color: white;
+  border: 1px solid white;
+  box-shadow: 0 0 0 0.2rem black !important;
+}
+
+.forgot {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  font-size: 15px;
+}
+
+.m-t-80 {
+  margin-top: 38px;
+}
+
+@media only screen and (max-width: 992px) {
+  .title {
+    font-size: 30px;
+    font-weight: normal;
+  }
+
+  .card-title {
+    font-size: 14px;
+    font-weight: lighter;
+  }
+
+  .m-t-80 {
+    margin-top: 38px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .card-title {
+    font-size: 14px;
+    font-weight: lighter;
+  }
+}

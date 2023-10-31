@@ -1,0 +1,472 @@
+<div class="headerPanel">
+  <div class="col-md-6 offset-md-3">
+    <ul class="nav">
+      <li class="top-headear text-left align-self-center"><i class="fa fa-sliders" style="font-size: 30px;
+            color: white"></i></li>
+      <li class="top-headear text-center align-self-center"><a><img alt="Popl logo" class="rippllogo"
+            src="assets/logo/Attachment_1588757267.png"></a></li>
+      <li class="top-headear text-right align-self-center"><a class="text-black"><b>Help</b></a></li>
+    </ul>
+  </div>
+</div>
+<form name="updateForm" [formGroup]="updateForm" novalidate>
+  <div class="">
+    <div class="row main-row">
+
+      <div class="col-12">
+        <div class="MainuserSection">
+          <div class="col-md-6 offset-md-3">
+
+            <div class="profile-logo mt-4">
+              <label for="upload-image">
+                <div class="profile-image" style="border-radius: 100%;" *ngIf="selectedPic == ''"><i
+                    class="fa fa-user"></i></div>
+                <!-- <img [src]="logoImage" style="border-radius: 100%;" *ngIf="selectedPic == ''"> -->
+                <img [src]="selectedPic" style="border-radius: 100%;" class="cropped-image" *ngIf="selectedPic != ''" />
+                <div class="btm1">
+                  <a class="ChangePhoto"> Change Photo</a>
+                  <!-- <img src="./assets/camera.png" /> -->
+                </div>
+              </label>
+              <input type="file" id="upload-image" formControlName="logo" (change)="fileChangeEvent($event)"
+                accept="image/png, image/jpeg" style="display:none" />
+            </div>
+            <!-- <div class="profile-image"><i class="fa fa-user"></i></div>
+					<a href="#" class="ChangePhoto"> Change Photo</a> -->
+            <div class="user-detail">
+
+              <div class="form-group">
+                <label>Profile Name</label>
+                <input type="text" class="form-control text-dark bg-gray" id="name" formControlName="name"
+                  value="kedar">
+              </div>
+              <div class="form-group">
+                <label>Bio</label>
+                <textarea class="form-control bg-gray" rows="3" formControlName="bio"></textarea>
+              </div>
+
+            </div>
+            <div class="profile-detail">
+              <span class="profile-public">Make profile public</span>
+              <div class="custom-control custom-switch">
+                <!-- <input type="checkbox" class="custom-control-input" *ngIf="!chkToggle" (change)="onChange($event)" id="customSwitches">
+                <input type="checkbox" class="custom-control-input" checked *ngIf="chkToggle" (change)="onChange($event)" id="customSwitches">
+				<label class="custom-control-label" for="customSwitches"></label> -->
+                <label class="toggle-switch">
+                  <input type="checkbox" class="custom-control-input" *ngIf="!chkToggle" (change)="onChange($event)"
+                    id="customSwitches">
+                  <input type="checkbox" class="custom-control-input" checked *ngIf="chkToggle"
+                    (change)="onChange($event)" id="customSwitches">
+                  <div class="slider"></div>
+                </label>
+              </div>
+              <small class="private_text proxima-nova">When your profile is public, others can access your profile using
+                the
+                link:<br><b>tapin.me/user/{{username}}</b></small>
+            </div>
+            <div class="social-part">
+              <div class="row">
+                <div class="col-10">
+                  <label class="sr-only">Username</label>
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">
+                        <img src="assets/social/insta.png">
+                      </div>
+                    </div>
+                    <input type="text" class="form-control" [(ngModel)]="instagram" #searchInput formControlName="instagram"
+                      placeholder="Instagram Username">
+                    <i class="fa fa-remove remove-class" (click)="instagram = ''"></i>
+                  </div>
+                </div>
+                <div class="col-2 align-center">
+                  <i class="fa fa-info-circle info-icon" placement="right"
+                    ngbPopover="Open the Instagram app and go to your profile. Your instagram username will be at the top of your screen."
+                    popoverTitle="Instagram username"></i>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-10">
+                  <label class="sr-only">Username</label>
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">
+                        <img src="assets/social/whatsapp.png">
+                      </div>
+                    </div>
+                    <input type="text" class="form-control" [(ngModel)]="whatsapp" #instaInput formControlName="whatsapp"
+                      placeholder="Whatsapp number">
+                    <i class="fa fa-remove remove-class" (click)="whatsapp = ''"></i>
+                  </div>
+                </div>
+                <div class="col-2 align-center">
+                  <i class="fa fa-info-circle info-icon" placement="right"
+                    ngbPopover="Open WhatsApp and go to settings. Tap your profile at the top and add your phone number here. Make sure to include your country code!"
+                    popoverTitle="WhatsApp number"></i>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-10">
+                  <label class="sr-only">Username</label>
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">
+                        <img src="assets/social/mailicon.png">
+                      </div>
+                    </div>
+                    <input type="text" class="form-control" [(ngModel)]="mail" #EmailInput formControlName="mail" placeholder="Email">
+                    <i class="fa fa-remove remove-class" (click)="mail = ''"></i>
+                  </div>
+                </div>
+                <div class="col-2 align-center">
+                  <i class="fa fa-info-circle info-icon" placement="right"
+                    ngbPopover="Input your email address. This email can be the same or different from the one used for your account signup."
+                    popoverTitle="Email"></i>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-10">
+                  <label class="sr-only">Username</label>
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">
+                        <img src="assets/social/facebookicon.png">
+                      </div>
+                    </div>
+                    <input type="text" class="form-control" [(ngModel)]="facebook" name="facebook" #fbInput formControlName="facebook"
+                      placeholder="Facebook profile link">
+                    <i class="fa fa-remove remove-class" (click)="facebook = ''"></i>
+                  </div>
+                </div>
+                <div class="col-2 align-center">
+                  <i class="fa fa-info-circle info-icon" placement="right"
+                    ngbPopover="Go to facebook.com and open your Facebook profile or page. Then copy and paste the url link here."
+                    popoverTitle="Facebook profile link"></i>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-10">
+                  <label class="sr-only">Username</label>
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">
+                        <img src="assets/social/snapchat.png">
+                      </div>
+                    </div>
+                    <input type="text" class="form-control" [(ngModel)]="snapchat" name="snapchat" #snapInput formControlName="snapchat"
+                      placeholder="Phone number">
+                    <i class="fa fa-remove remove-class" (click)="snapchat = ''"></i>
+                  </div>
+                </div>
+                <div class="col-2 align-center">
+                  <i class="fa fa-info-circle info-icon" placement="right"
+                    ngbPopover="Open Snapchat and tap your profile picture in the top left corner. Your snapchat username will be below your Snapchat name."
+                    popoverTitle="Snapchat username"></i>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-10">
+                  <label class="sr-only">Username</label>
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text"> 
+                        <img src="assets/social/youtube.png">
+                      </div>
+                    </div>
+                    <input type="text" class="form-control" [(ngModel)]="youtube" name="youtube" #youTubeInput formControlName="youtube"
+                      placeholder="Youtube user/channel link">
+                    <i class="fa fa-remove remove-class" (click)="youtube = ''"></i>
+                  </div>
+                </div>
+                <div class="col-2 align-center">
+                  <i class="fa fa-info-circle info-icon" placement="right"
+                    ngbPopover="Open the Youtube app and go to your channel. Then tap the three dots in the top right corner and tap share. Copy/paste the link here."
+                    popoverTitle="Youtube channel link"></i>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-10">
+                  <label class="sr-only">Username</label>
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">
+                        <img src="assets/social/twitter.png">
+                      </div>
+                    </div>
+                    <input type="text" class="form-control" [(ngModel)]="twitter" #twitterInput formControlName="twitter"
+                      placeholder="Twitter username">
+                    <i class="fa fa-remove remove-class" (click)="twitter = ''"></i>
+                  </div>
+                </div>
+                <div class="col-2 align-center">
+                  <i class="fa fa-info-circle info-icon" placement="right"
+                    ngbPopover="Open the Twitter app and tap your profile picture in the top left corner. Your twitter username will be in grey with an @ sign."
+                    popoverTitle="Twitter username"></i>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-10">
+                  <label class="sr-only">Username</label>
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">
+                        <img src="assets/social/linkedin.png">
+                      </div>
+                    </div>
+                    <input type="text" class="form-control" [(ngModel)]="linkedin" #linkedinInput formControlName="linkedin"
+                      placeholder="Linkedin profile link">
+                    <i class="fa fa-remove remove-class" (click)="linkedin = ''"></i>
+                  </div>
+                </div>
+                <div class="col-2 align-center">
+                  <i class="fa fa-info-circle info-icon" placement="right"
+                    ngbPopover="Go to your Linkedin profile and scroll down to the “contact” section. Find your LinkedIn profile link in this section and copy/paste here!"
+                    popoverTitle="LinkedIn profile link"></i>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-10">
+                  <label class="sr-only">Username</label>
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">
+                        <img src="assets/social/imessage.png">
+                      </div>
+                    </div>
+                    <input type="text" class="form-control" [(ngModel)]="imessage" #imsgInput formControlName="imessage"
+                      placeholder="Username">
+                    <i class="fa fa-remove remove-class" (click)="imessage = ''"></i>
+                  </div>
+                </div>
+                <div class="col-2 align-center">
+                  <i class="fa fa-info-circle info-icon" placement="right"
+                    ngbPopover="Input your phone number with your country code (Example +1 for USA)."
+                    popoverTitle="Text"></i>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-10">
+                  <label class="sr-only">Username</label>
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">
+                        <img src="assets/social/customlink.png">
+                      </div>
+                    </div>
+                    <input type="text" class="form-control" [(ngModel)]="customLink" #customInput formControlName="customLink"
+                      placeholder="Custom link">
+                    <i class="fa fa-remove remove-class" (click)="customLink = ''"></i>
+                  </div>
+                </div>
+                <div class="col-2 align-center">
+                  <i class="fa fa-info-circle info-icon" placement="right"
+                    ngbPopover="Open your desired custom link and copy/paste the url here. This link can be a location, Paypal link, second Instagram or anything else you can imagine!"
+                    popoverTitle="Custom link"></i>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-10">
+                  <label class="sr-only">Username</label>
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">
+                        <img src="assets/social/twitch.png">
+                      </div>
+                    </div>
+                    <input type="text" class="form-control" [(ngModel)]="twitch" #twitchInput formControlName="twitch"
+                      placeholder="Twitch username">
+                    <i class="fa fa-remove remove-class" (click)="twitch = ''"></i>
+                  </div>
+                </div>
+                <div class="col-2 align-center">
+                  <i class="fa fa-info-circle info-icon" placement="right"
+                    ngbPopover="Open the Twitch app and go to your account. Copy and paste your username here!"
+                    popoverTitle="Twitch channel"></i>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-10">
+                  <label class="sr-only">Username</label>
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">
+                        <img src="assets/social/tiktoknew.png">
+                      </div>
+                    </div>
+                    <input type="text" class="form-control" [(ngModel)]="tiktok" #tikTokInput formControlName="tiktok"
+                      placeholder="TikTok username">
+                    <i class="fa fa-remove remove-class" (click)="tiktok = ''"></i>
+                  </div>
+                </div>
+                <div class="col-2 align-center">
+                  <i class="fa fa-info-circle info-icon" placement="right"
+                    ngbPopover="Open TikTok and go to the “me” tab. Your TikTok username is under your profile picture."
+                    popoverTitle="TikTok Username"></i>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-10">
+                  <label class="sr-only">Username</label>
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">
+                        <img src="assets/social/soundcloudnew.png">
+                      </div>
+                    </div>
+                    <input type="text" class="form-control" [(ngModel)]="soundcloud" #soundInput formControlName="soundcloud"
+                      placeholder="Soundcloud username">
+                    <i class="fa fa-remove remove-class" (click)="soundcloud = ''"></i>
+                  </div>
+                </div>
+                <div class="col-2 align-center">
+                  <i class="fa fa-info-circle info-icon" placement="right"
+                    ngbPopover="Open the Soundcloud app and go to your profile. Copy and paste your username here."
+                    popoverTitle="Soundcloud username"></i>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-10">
+                  <label class="sr-only">Username</label>
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">
+                        <img src="assets/social/spotify.png">
+                      </div>
+                    </div>
+                    <input type="text" class="form-control" [(ngModel)]="spotify" #spotifyInput formControlName="spotify"
+                      placeholder="Link to Spotify">
+                    <i class="fa fa-remove remove-class" (click)="spotify = ''"></i>
+                  </div>
+                </div>
+                <div class="col-2 align-center">
+                  <i class="fa fa-info-circle info-icon" placement="right"
+                    ngbPopover="Pick your favorite playlist/track/album and tap the three dots in the top right corner. Tap share and copy/paste the link here."
+                    popoverTitle="Link to Spotify"></i>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-10">
+                  <label class="sr-only">Username</label>
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">
+                        <img src="assets/social/applemusicicon.png">
+                      </div>
+                    </div>
+                    <input type="text" class="form-control" [(ngModel)]="applemusic" #appleInput formControlName="applemusic"
+                      placeholder="Link to Apple Music">
+                    <i class="fa fa-remove remove-class" (click)="applemusic = ''"></i>
+                  </div>
+                </div>
+                <div class="col-2 align-center">
+                  <i class="fa fa-info-circle info-icon" placement="right"
+                    ngbPopover="Pick your favorite playlist/track/album and tap the three dots in the top right corner. Tap share and copy/paste link here."
+                    popoverTitle="Link to Apple Music"></i>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-10">
+                  <label class="sr-only">Username</label>
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">
+                        <img src="assets/social/venmo.png">
+                      </div>
+                    </div>
+                    <input type="text" class="form-control" [(ngModel)]="venmo" #venmoInput formControlName="venmo"
+                      placeholder="Venmo username">
+                    <i class="fa fa-remove remove-class" (click)="venmo = ''"></i>
+                  </div>
+                </div>
+                <div class="col-2 align-center">
+                  <i class="fa fa-info-circle info-icon" placement="right"
+                    ngbPopover="Open the Venmo app and tap the three lines in the top left corner. Your username will be in grey with an @ sign."
+                    popoverTitle="Venmo username"></i>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-10">
+                  <label class="sr-only">Username</label>
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">
+                        <img src="assets/social/cash.png">
+                      </div>
+                    </div>
+                    <input type="text" class="form-control" [(ngModel)]="cashapp" #cashInput formControlName="cashapp"
+                      placeholder="Cash App username">
+                    <i class="fa fa-remove remove-class" (click)="cashapp = ''"></i>
+                  </div>
+                </div>
+                <div class="col-2 align-center">
+                  <i class="fa fa-info-circle info-icon" placement="right"
+                    ngbPopover="Open CashApp and tap the profile icon in the top right corner. Your CashApp username will be in grey with a $."
+                    popoverTitle="CashApp username"></i>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-10">
+                  <label class="sr-only">Username</label>
+                  <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                      <div class="input-group-text">
+                        <img src="assets/social/safari.png">
+                      </div>
+                    </div>
+                    <input type="text" class="form-control" [(ngModel)]="safari" #webLinkInput formControlName="safari"
+                      placeholder="Website link">
+                    <i class="fa fa-remove remove-class" (click)="safari = ''"></i>
+                  </div>
+                </div>
+                <div class="col-2 align-center">
+                  <i class="fa fa-info-circle info-icon" placement="right"
+                    ngbPopover="Open your desired website and copy/paste the url here." popoverTitle="Website link"></i>
+                </div>
+              </div>
+              <br>
+              <br>
+              <br> 
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="save-bottom-sectopn">
+    <div class="col-md-4 offset-md-4">
+      <button type="submit" class="btn btn-primary" (click)="onSubmit(updateForm.value)"><b>Save</b></button>
+    </div>
+  </div>
+</form>
+
+<button id="openModalButton" [hidden]="true" data-toggle="modal" data-target="#myModal">Open Modal</button>
+
+<!-- The Modal -->
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Profile Image</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <image-cropper [imageChangedEvent]="imageChangedEvent" [maintainAspectRatio]="true" [aspectRatio]="3/ 3"
+          [onlyScaleDown]="true" [roundCropper]="true" format="png" outputType="base64"
+          (imageCropped)="imageCropped($event)" [style.display]="true">
+        </image-cropper>
+      </div>
+
+      <div class="modal-footer">
+        <div class="col-lg-12 text-center mt-3">
+          <button type="button" class="btn btn-info box-shadow--16dp" data-dismiss="modal"
+            (click)="onCloseDialog()">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

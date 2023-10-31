@@ -1,0 +1,569 @@
+.btn-top {
+    background-color: black;
+    font-weight: 500;
+    color: white;
+    width: 100%;
+    border-radius: 0 !important;
+    position: fixed;
+    z-index: 9999;
+  }
+  
+  .logo {
+    height: 60px;
+    width: 60px;
+  }
+  
+  .new-link-row {
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .column-ten{
+    padding-left: 0px !important;
+    padding-top: 5px;
+  }
+  
+  .link-caption{
+    font-size: 15px;
+    color: grey;
+    margin: 0px 8px;
+  }
+  
+  .last-btn{
+    width: 80%;
+    /* margin-top: 20px; */
+    margin: 13px 8px;
+  }
+  
+  .inner-row{
+    background-color: #e9e9e9;
+    border-radius: 10px;
+  }
+  
+  .cross{
+    position: absolute;
+    right:15px;
+    font-size: 20px;
+  }
+  
+  .user-title{
+    font-size: 16px;
+  }
+  
+  .inner-img{
+    width: 30px;
+    height: 30px;
+  }
+  
+  .header {
+    text-align: center;
+    width: 100%;
+    border: 1px solid black;
+  }
+  
+  .link-input {
+    width: 100%;
+    border: none;
+    background-color: #e9e9e9;
+  }
+  
+  .link-input:focus{
+    outline:none !important;
+  }
+
+  .removeBorder {
+    border-bottom: none !important;
+  }
+
+  .logoResize a img {
+    width: 60px !important;
+    height: 60px !important;
+  }
+
+.closeButton 
+{
+  color: #00aced !important;
+  top: 7px;
+  right: 20px;
+  font-size: 30px;
+  position: absolute;
+}
+  
+  /* .last {
+    width: 100%;
+    height: 250px;
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+  } */
+
+  .last {
+    left: 50%;
+    top: 65%;
+    transform: translate(-50%, -50%);
+    border-top-left-radius: 165px;
+    border-top-right-radius: 165px;
+    border-bottom-left-radius: 45px;
+    border-bottom-right-radius: 45px;
+    width: 280px;
+    /* height: 520px; */
+    background: white;
+    position: absolute;
+  }
+
+  .close-button {
+    color: #00aced !important;
+    top: 7px; 
+    left:32px;
+    font-size: 30px;
+    position: absolute;
+    z-index: 99999;
+  }
+
+  .close-button img 
+   {
+    position: absolute;
+    left: -41px;
+    top: -12px;
+   }
+   
+   .setOpt {
+    opacity: .1;
+  }
+
+  .mobile{
+    display: block;
+  }
+
+  .inner-rowss{
+    margin-top:6px;
+  }
+
+  .inner-image{
+    height:225px;
+  }
+  
+  .img {
+    height: 60px;
+    width: 60px;
+  }
+  
+  .whtsapp {
+    width: 100%;
+    border-radius: 50%;
+    border: 3px solid white;
+  }
+  .close-button{
+      color: #00aced !important;
+      top: 7px;
+      right:20px;
+      font-size: 30px;
+      position: absolute;
+  }
+  .opacity{
+    opacity: 0.1;
+  }
+  .links-button{
+      border: none;
+      background: white;
+      width: 100%;
+  }
+  .links-button:focus{
+    box-shadow: none !important;
+    outline:none !important;
+    border:none !important;
+  }
+  .green {
+    width: 100%;
+    padding: 4px;
+    background-color: #000000;
+    border-color: #ffffff;
+    font-size: 18px;
+    font-family: proxima-nova, Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    overflow: hidden;
+    margin-left: 8px;
+    margin-right: 15px;
+    color: white;
+    
+  }
+  .green:hover {
+    background-color: #ffffff;
+    color: black;
+}
+  
+  .red {
+      color: white;
+      background-color: #28a745;
+      width: 100%;
+      padding: 4px;
+      font-size: 18px;
+      font-family: proxima-nova, Arial, Helvetica, sans-serif;
+      font-weight: 400;
+      overflow: hidden;
+      margin-left: 8px;
+      margin-right: 15px;
+  }
+  .extra-img{
+      width: 100%;
+  }
+  .btn-1{
+      width: 250px;
+  }
+  
+  .link-text{
+      font-size: 30px;
+      font-weight: 400;
+  }
+  .Links{
+      position: fixed;
+      max-height: 500px;
+      overflow: scroll;
+      width: 100%;
+      bottom: 0;
+      background-color: white;
+      z-index: 9999;
+  }
+  .bottom-text{
+      font-size: 22px;
+      font-weight: 400;
+  }
+  .popl {
+    width: 100%;
+    background-color: #000000;
+    color: white;
+    font-weight: 550;
+    text-align: center;
+    border: none;
+    border-radius: 0;
+    float: left;
+  }
+  
+  .column {
+    position: relative;
+  }
+  
+  .column:hover{
+    cursor: pointer;
+  }
+  
+  .bottom {
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: #fff;
+    z-index: 9999;
+  }
+  
+  .close {
+    position: absolute;
+    left: 62px;
+    color: white;
+  }
+  
+  .desc {
+    display: block;
+    color: white;
+  }
+
+  .optClass{
+    margin-top: 10px;
+  }
+  
+  .headerPanel {
+    width: 100%;
+    height: 80px;
+    float: left;
+    padding: 2px 0;
+    border-bottom: 1px solid #DADADA;
+  }
+  
+  .image-col {
+    float: left;
+  }
+  
+  .rippllogo {
+    height: 55px;
+    padding: 1px
+  }
+  
+  .EditProfile i {
+    font-size: 30px;
+    color: #fff;
+  }
+  
+  .justify-space-between {
+    justify-content: space-between;
+  }
+  
+  .mainprofileSection {
+    width: 100%;
+    float: left;
+  }
+  
+  .profileSection {
+    width: 100%;
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+  }
+  
+  .profileImage i {
+    font-size: 100px;
+    color: white;
+  }
+  
+  .bio {
+    display: block;
+    padding-top: 3px;
+    text-align: center;
+    color: white;
+  }
+  
+  .prfileContant {
+    color:white;
+    width: 100%;
+    font-family: proxima-nova, Arial, Helvetica, sans-serif;
+    font-weight: 700;
+  }
+  
+  .buttonSection button.btn.btn-primary {
+    width: 100%;
+    padding: 4px;
+    background-color: #00aced;
+    border-color: #00aced;
+    font-size: 18px;
+    font-family: proxima-nova, Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    overflow: hidden;
+    margin-left: 8px;
+    margin-right: 15px;
+  }
+  
+  button.btn.btn-primary.directButton {
+    overflow: hidden;
+    margin: 0 15px;
+  }
+  /* .directButton{
+     
+  } */
+  
+  .prfileContant h3 {
+    font-size: 30px
+  }
+  
+  .prfileContant p {
+    font-weight: 400;
+  }
+  
+  .iconImage {
+    width: 40%;
+    display: inline-block;
+    padding: 10px;
+    margin: 12px;
+    margin-bottom: -10px;
+    position: relative;
+  }
+  
+  .iconImage a {
+    color: #000000
+  }
+  
+  .iconImage img {
+    width: 100%;
+    height: 100%
+  }
+  
+  .mainIcone {
+    text-align: center;
+    padding-top: 1px;
+    overflow: hidden;
+  }
+  
+  .PoweredSection {
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .PoweredBy {
+    padding-top: 20px;
+    width: 100%;
+    text-align: center;
+    color: #00aced;
+    font-size: 18px;
+  }
+  a.PoweredBy:hover {
+    color: #00aced;
+}
+  
+  .PoweredSection hr {
+    margin: auto;
+    width: 32%;
+  }
+  
+  .PoweredBy.helpSection {
+    width: 100%;
+    float: left;
+    font-size: 22px;
+  }
+  
+  /*Qr code  */
+  
+  .qrgenerateSection {
+      height: 420px;
+      width: 100%;
+      z-index: 999999999999;
+      background-color: white;
+      overflow-x: hidden;
+      transition: 0.5s;
+      position: fixed;
+      bottom: 0;
+  }
+  .qrgenerateSection .closeqr {
+      position: absolute;
+      top: 1px;
+      right: 10px;
+      font-size: 30px;
+      color: #00aced;
+  }
+  .qr-content .addWalletbtn {
+      margin: 0 auto;
+      background-color: #00aced;
+      border-color: #00aced;
+      font-size: 22px;
+      color: #ffffff;
+      margin-top: 65px;
+      margin-bottom: 0px;
+      padding: 3px;
+  }
+  .qrgenerateSection a {
+      text-decoration: none;
+      font-size: 36px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+  }
+  .qr-content .scan-taxt{
+      color: #818181;
+      font-size: 18px ;
+      padding-top: 20px;
+  }
+  .qr-content .scan-taxt a{
+      padding: 0px;
+      display: inline-block;
+      color: #00aced;
+      font-size: 18px;}
+  
+      .disabled
+     {
+      cursor: not-allowed;
+         
+      }
+  
+      .setOpacity {
+      opacity: 0.1;
+     }
+  
+      .setOpacity button {
+        cursor: no-drop;
+      }
+  
+      .setOpacity img {
+        cursor: no-drop;
+      }
+  
+      .disabled img {
+        -webkit-filter: blur(5px);
+        -moz-filter: blur(5px);
+        -o-filter: blur(5px);
+        -ms-filter: blur(5px);
+        filter: blur(5px);
+        background: #dddddd;
+        cursor: not-allowed;
+        z-index: 1;
+      }
+      .add-social .input-group-addon-new {
+        line-height: 22px !important;
+      padding: 5px !important;
+      width: 20px !important;
+      height: 42px !important;
+      background: #e9e9e9 !important;
+      border: 0 !important;
+      width: 55px !important;
+      border-radius: 10px;
+      margin-right: -10px;
+      z-index: 999;
+    }
+    .add-social .input-group {
+      position: relative;
+      display: -ms-flexbox;
+      display: flex;
+      width: 100%;
+  }
+  
+  .add-social .input-group-addon-new img {
+      width: 32px;
+      height: 32px;
+      margin-left: 1px;
+  }
+  .add-social .input-group .form-control {
+      position: relative;
+      z-index: 2;
+      -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
+      width: 1%;
+      margin-bottom: 0;
+  }
+  .add-social .form-control-new:visited, .form-control-new:hover, .form-control-new:active, .form-control-new {
+      background: #e9e9e9;
+      padding: 12px 30px;
+      border-radius: 10px !important;
+      height: 42px;
+      border: 0;
+      margin: 0px 8px;
+      
+  }
+  .add-social .closeBtn:hover, .closeBtn:active, .closeBtn {
+    color: #A7A9AB;
+    font-size: 24px;
+    position: absolute;
+    right: 12px;
+    top: 9px;
+    cursor: pointer;
+    z-index: 9;
+  }
+  .input-group .form-control {
+    position: relative;
+    z-index: 2;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    width: 1%;
+    margin-bottom: 0;
+  }
+
+  .colorLink {
+    cursor: pointer;
+    color: #00aced;
+}
+
+.colorLink:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #00aced;
+}
+
+.helpSection:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: #00aced;
+}
+  
+  @media only screen and (max-width: 992px) {
+    .user-title{font-size: 22px;}
+   }
+   @media only screen and (max-width: 500px) {
+    .user-title{font-size: 18px;}
+    .Links .caption {font-size: 10px; word-break: break-all;}
+  }

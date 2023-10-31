@@ -1,0 +1,30 @@
+.cursorPoint {
+    cursor: pointer;
+}
+.headerPanel {width: 100%; float: left; padding: 10px 0; border-bottom: 1px solid #DADADA;}
+.justify-space-between {justify-content: space-between;}
+.aline-center{align-items: center;}
+.rippllogo {height: 45px; padding: 1px}
+.text-black{color: #fff}
+.settingTitle{font-size: 1.5rem; color: #fff;}
+.main-section .btn-primary{width: 100%; padding: 10px;font-size: 18px;font-weight: 400;}
+.change-password {background-color: #00aced; border-color: #00aced;}
+.compatible-phone{background-color: #738491; border-color: #738491}
+.log-out{background-color: #f97080; border-color: #f97080; color: #fff;}
+.btn.btn-custom.mb-3 {
+    display: block;
+    margin: 0 auto;
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    width: auto;
+    float: left;
+}
+.versionText {color: #b5b5b5;}
+
+@media only screen and (max-width: 767px){
+    .main-section .btn-primary {
+        padding: 8px;
+        font-size: 16px;
+    }
+}

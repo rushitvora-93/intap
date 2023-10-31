@@ -1,0 +1,36 @@
+.header {
+  text-align: center;
+  width: 100%;
+  border-bottom: 1px solid #DADADA;
+}
+
+.logo {
+  height: 60px;
+  width: 60px;
+}
+
+.margin {
+  margin-top: 180px;
+}
+
+h3 {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+span {
+  font-size: 50px;
+}
+
+.work {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    5% { transform: skewX(15deg); }
+    10% { transform: skewX(-15deg); }
+    15% { transform: skewX(15deg); }
+    20% { transform: skewX(0deg); }
+    100% { transform: skewX(0deg); }  
+}

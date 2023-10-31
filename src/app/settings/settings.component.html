@@ -1,0 +1,24 @@
+<div class="headerPanel">
+	<div class="col-md-6 offset-md-3">
+	  	<ul class="nav">
+	  		<li class="top-headear text-left align-self-center"><a class="text-black"><b></b></a></li>
+	  		<li class="top-headear text-center align-self-center"><a><img alt="Popl logo" class="rippllogo" src="assets/logo/Attachment_1588757267.png"></a></li>
+	  		<li class="top-headear text-right align-self-center cursorPoint"><a (click)="back()" class="text-black"><b>Back</b></a></li>
+	  	</ul>
+	</div>
+</div>
+
+<div class="main-section">
+	<div class="col-md-6 offset-md-3">
+		<div class="w-100 text-center float-left mt-3 ">
+			<h4 class="settingTitle mb-3">Settings</h4>
+		</div>
+		<a (click)="change()" class="btn btn-primary change-password mb-3 text-white"><b>Change Password</b></a>
+		<a href="#" class="btn btn-primary compatible-phone mb-3" routerLink = "/compatible-phones"><b>Compatible Phones</b></a>
+		<a class="btn btn-primary log-out mb-3" (click)="logOut()"><b>Log out</b></a>
+		<div class="d-flex flex-column aline-center justify-content-center">
+			<a href="#" class="btn btn-custom mb-3" (click) = "deleteAccount()"><b>Delete Account</b></a>
+			<p class="versionText">TapIn Profiles - Version 3.0</p>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,353 @@
+.btn-top {
+    background-color: black;
+    font-weight: 500;
+    color: white;
+    width: 100%;
+    border-radius: 0 !important;
+    position: fixed;
+    z-index: 9999;
+  }
+  .taxt-black{color: #ffffff;}
+  .logo {
+    height: 60px;
+    width: 60px;
+  }
+  
+  .new-link-row {
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .column-ten{
+    padding-left: 0px !important;
+    padding-top: 5px;
+  }
+  
+  .link-caption{
+    font-size: 15px;
+    color: grey;
+    margin-top: 10px;
+  }
+  
+  .last-btn{
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .inner-row{
+    background-color: #e9e9e9;
+    border-radius: 10px;
+  }
+  
+  .cross{
+    position: absolute;
+    right:15px;
+    font-size: 20px;
+  }
+  
+  .user-title{
+    font-size: 30px;
+  }
+  
+  .inner-img{
+    width: 30px;
+    height: 30px;
+  }
+  
+  .header {
+    text-align: center;
+    width: 100%;
+    border: 1px solid black;
+  }
+  
+  .link-input {
+    width: 100%;
+    border: none;
+    background-color: #e9e9e9;
+  }
+  
+  .link-input:focus{
+    outline:none !important;
+  }
+  
+  .last {
+    width: 100%;
+    height: 250px;
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+  }
+  
+  .img {
+    height: 60px;
+    width: 60px;
+  }
+  .profileImage {
+    padding-right: 30px;
+}
+  .whtsapp {
+    width: 100%;
+    border: 3px solid #fff;
+    border-radius: 50%;
+  }
+  .close-button{
+      color: #00aced !important;
+      top: 7px;
+      right:20px;
+      font-size: 30px;
+      position: absolute;
+  }
+  .opacity{
+    opacity: 0.1;
+  }
+  .links-button{
+      border: none;
+      background: white;
+      width: 100%;
+  }
+  .links-button:focus{
+    box-shadow: none !important;
+    outline:none !important;
+    border:none !important;
+  }
+  .green {
+      width: 100%;
+      padding: 4px;
+      background-color: #00aced;
+      border-color: #00aced;
+      font-size: 18px;
+      font-family: proxima-nova, Arial, Helvetica, sans-serif;
+      font-weight: 400;
+      overflow: hidden;
+      margin-left: 8px;
+      margin-right: 15px;
+      color: white;
+  }
+  
+  .red {
+      color: white;
+      background-color: #28a745;
+      width: 100%;
+      padding: 4px;
+      font-size: 18px;
+      font-family: proxima-nova, Arial, Helvetica, sans-serif;
+      font-weight: 400;
+      overflow: hidden;
+      margin-left: 8px;
+      margin-right: 15px;
+  }
+  .extra-img{
+      width: 100%;
+  }
+  .btn-1{
+      width: 250px;
+  }
+  
+  .link-text{
+      font-size: 30px;
+      font-weight: 400;
+  }
+  .Links{
+      position: fixed;
+      max-height: 500px;
+      overflow: scroll;
+      width: 100%;
+      bottom: 0;
+      background-color: white;
+      z-index: 9999;
+  }
+  .bottom-text{
+      font-size: 22px;
+      font-weight: 400;
+  }
+  .popl {
+    width: 100%;
+    background-color: #000000;
+    color: white;
+    font-weight: 550;
+    text-align: center;
+    border: none;
+    border-radius: 0;
+    float: left;
+  }
+  
+  .column {
+    position: relative;
+  }
+  
+  .column:hover{
+    cursor: pointer;
+  }
+  
+  .bottom {
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: #fff;
+    z-index: 9999;
+  }
+  
+  .close {
+    position: absolute;
+    right: 34px;
+  }
+  
+  desc {
+    display: block;
+  }
+  
+  .headerPanel {
+    width: 100%;
+    float: left;
+    padding: 10px 0;
+    border-bottom: 1px solid #DADADA;
+  }
+  
+  .image-col {
+    float: left;
+  }
+  
+  .rippllogo {
+    height: 45px;
+    padding: 1px
+  }
+  
+  .EditProfile i {
+    font-size: 30px;
+    color: black;
+  }
+  
+  .justify-space-between {
+    justify-content: space-between;
+  }
+  
+  .mainprofileSection {
+    width: 100%;
+    float: left;
+  }
+  
+  .profileSection {
+    width: 100%;
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+  }
+  
+  .profileImage i {
+    font-size: 100px;
+    color: #818181;
+  }
+
+  .profileImage img {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    color: #818181;
+  }
+  
+  .bio {
+    display: block;
+    padding-top: 3px;
+    text-align: center;
+    color: #fff;
+  }
+  .desc {
+    color: #fff;
+}
+a.PoweredBy:hover {
+  color: #00aced;
+}
+  .prfileContant {
+    color: #fff;
+    width: 100%;
+    font-family: proxima-nova, Arial, Helvetica, sans-serif;
+    font-weight: 700;
+  }
+  
+  .buttonSection button.btn.btn-primary {
+    width: 100%;
+    padding: 4px;
+    background-color: #000000;
+    border: 1px solid;
+    border-color: #ffffff;
+    font-size: 18px;
+    font-family: proxima-nova, Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    overflow: hidden;
+  }
+  .buttonSection button.btn.btn-primary:hover{
+  background-color: #ffffff;
+  color: black;}
+  
+  button.btn.btn-primary.directButton {
+    overflow: hidden;
+    margin: 0 15px;
+  }
+  
+  .prfileContant h3 {
+    font-size: 30px
+  }
+  
+  .prfileContant p {
+    font-weight: 400;
+  }
+  
+  .iconImage {
+    width: 40%;
+    display: inline-block;
+    padding: 10px;
+    margin: 12px;
+    margin-bottom: -10px;
+    position: relative;
+  }
+  
+  .iconImage a {
+    color: #000000
+  }
+  
+  .iconImage img {
+    width: 100%;
+    height: 100%
+  }
+  
+  .mainIcone {
+    text-align: center;
+    padding-top: 1px;
+    overflow: hidden;
+  }
+  
+  .PoweredSection {
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .PoweredBy {
+    padding-top: 20px;
+    width: 100%;
+    text-align: center;
+    color: #00aced;
+    font-size: 18px;
+  }
+
+  .logoText {
+    color: #00aced;
+  }
+  
+  .PoweredSection hr {
+    margin: auto;
+    width: 32%;
+  }
+  
+  .PoweredBy.helpSection {
+    width: 100%;
+    float: left;
+    font-size: 22px;
+  }
+
+  .profileEnable i {
+    font-size: 40px;
+    color: #00aced;
+  }
+  

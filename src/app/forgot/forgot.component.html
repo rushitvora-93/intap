@@ -1,0 +1,30 @@
+<div class="header">
+    <img class="logo my-3" src="assets/logo/Attachment_1588757267.png" />
+    <!-- <a [routerLink]="['/sign-up']" class="join-link"><b>Join</b></a> -->
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 offset-md-3 m-t-80">
+        <h2 class="title text-center">Password Recovery</h2>
+        <div class="card">
+            <p class="card-title text-center">Enter the email address associated with your profile and we will email you a 6 digit code to reset your password!</p>
+            <form name="forgotForm" [formGroup]="forgotForm" novalidate>
+              <div class="form-group">
+                <input type="email" formControlName="email" class="form-control email" placeholder="Email">
+                <small class="text-danger" *ngIf="forgotFormErrors.email.required">
+                  Email is required
+                </small>
+                <small class="text-danger" *ngIf="!forgotFormErrors.email.required && forgotFormErrors.email.email">
+                  Please enter a valid email address
+                </small>
+              </div>
+             
+              <button type="submit" class="btn btn-primary login" (click)="onSubmit(forgotForm.value)" [disabled]="forgotForm.invalid">Send 6 Digit Code</button>
+              <a class="text-center text-primary forgot" routerLink = "/login">Back to Login </a>
+             
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
